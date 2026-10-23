@@ -52,6 +52,7 @@ router.get('/', function(req, res, next) {
         });
     }).catch(function (error) {
         console.log("ERROR: ", error);
+        next(new Error('No se ha podido cargar la pagina'));
     });
 
 });
